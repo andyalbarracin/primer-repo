@@ -1,0 +1,993 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.grid-container {
+	width: 90%;
+	max-width: 1000px;
+	display: grid;
+	grid-gap: 10px;
+    margin: 0 auto;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 15% auto auto auto auto auto;
+	grid-template-areas: "header header header"
+						 "hero hero hero"
+						 "explorar explorar explorar"
+						 "tienda tienda tienda"
+                         "final final final"
+                         "footer footer footer";
+}
+
+
+header, footer{
+    grid-column: 1 / 4;
+}
+
+
+button{
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color: green;
+}
+
+button:hover{
+    background-color: rgb(101, 33, 165);
+}
+
+header {
+    display: flex;
+    margin: 0 auto;
+    grid-area: header;
+    flex-direction: row;
+    text-align: center;
+    padding: 10px;
+    background-color: whitesmoke;
+    width: 100%;
+    justify-content: space-between;
+}
+
+header .logo{
+    display: flex;
+    padding: 5px 5px;
+    font-weight: bold;
+    color: green;
+    font-size: 1.6em;
+}
+
+#header nav{
+    display: flex;
+    text-align: center;
+}
+
+header a{
+    display: flex;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    align-items: center;
+    padding: 10px;
+}
+
+header a:hover{
+    color: violet;
+}
+
+/*HERO*/
+/*HERO*/
+/*HERO*/
+#hero {
+    grid-area: hero;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    max-height: 500px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    , url("/images/herob.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 1em;
+}
+
+
+#hero h1{
+    color: white;
+    font-size: 3em;
+    }
+
+#hero button{
+    font-size: 1.75em;
+    padding: 1em;
+}
+
+/*EXPLORAR*/
+/*EXPLORAR*/
+/*EXPLORAR*/
+#explorar {
+    margin-top: 50px;
+    grid-area: explorar;
+    text-align: center;
+    align-content: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#explorar .img-container{
+    width: 30%;
+    height: 30%;
+}
+
+
+#explorar .texto{
+    width: 50%;
+    max-width: 600px;
+    text-align: justify;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#explorar h2{
+    margin-top: 1px;
+}
+
+#explorar .img-container{
+    background-image: url("/images/imagen5.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    width: 400px; 
+}
+
+/*TIENDA*/
+/*TIENDA*/
+/*TIENDA*/
+#tienda {
+    grid-area: tienda;
+    display: flex;
+    margin-top: 10px;
+    text-align: center;
+    justify-content: center;
+    padding: 1em;
+    background-color: darkgrey;
+    color: white;
+    text-align: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+#tienda h2{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 3.2em;
+}
+
+#tienda .ropa{
+    display: flex;
+    flex-flow: row wrap;
+    width: 90%;
+    justify-content: center;
+    margin: 0 auto;
+    
+}
+
+
+/***CARDS**/
+.item__card{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    padding: 5px;
+    background-image: url("/images/pantalon1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.img__card{
+    width: 50%;
+    height: 50%;
+    align-content: center;
+    align-items: center;
+}
+.price{
+    font-size: 2rem;
+    color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+.item__description .name{
+    font-size: 14px;
+    color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.item__card:hover{
+    cursor: pointer;
+    box-shadow: 27px 42px 21px -3px rgba(0,0,0,0.1);
+    position: relative;
+    transition: 0.5s ease-in;
+}
+
+.item__description{
+    margin: 0 auto;
+    width: 100%;
+}
+
+.item__card button{
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+    padding: 10px;
+    margin: 2em;
+}
+
+/*FIN CARDS*/
+/*FIN CARDS*/
+
+
+/*FINAL*/
+/*FINAL*/
+/*FINAL*/
+#final {
+    margin: o auto;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    text-align: center;
+    color: black;
+}
+
+
+#final h2{
+    margin: 0 auto;
+    margin-top: 5vh;
+    display: flex;
+    font-size: 3em;
+}
+
+#final p{
+    font-size: 1em;
+    text-align: center;
+}
+
+
+#final button{
+    font-size: 1em;
+    margin: 20px;
+}
+
+footer{
+    grid-area: footer;
+    background-color: rgb(230,230,230);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+footer p{
+    margin: 0 auto;
+    padding: 5px;
+    color: rgb(100,100,100);
+    font: 1em sans-serif;;
+}
+
+#productosfooter{
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+
+/**GALERIA DE IMAGENES*/
+/**GALERIA DE IMAGENES*/
+
+.grid-container-galeria {
+	width: 90%;
+	max-width: 1000px;
+	display: grid;
+	grid-gap: 10px;
+    margin: 0 auto;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto auto auto auto;
+	grid-template-areas: "header_gal header_gal header_gal"
+						 "gal_gal gal_gal gal_gal"
+                         "final_gal final_gal final_gal"
+                         "footer footer footer";
+}
+
+#header_galeria  {
+    grid-area: header_gal;
+}
+
+#header_galeria .logo{
+    display: flex;
+    padding: 5px 5px;
+    font-weight: bold;
+    color: green;
+    font-size: 1.6em;
+}
+
+#header_galeria nav{
+    display: flex;
+    text-align: center;
+}
+
+#header_galeria a{
+    display: flex;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    align-items: center;
+    padding: 10px;
+}
+
+#header_galeria a:hover{
+    color: violet;
+}
+
+
+#gal_gal{
+    grid-area: gal_gal;
+    display: flex;
+    padding: 0 4px;
+    width: 90%;
+
+}
+
+.flex-galery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.flex-galery img{
+    margin-top: 8px;
+    justify-content: center;
+    align-content: center;
+    width: 30%;
+    margin: 5px;
+}
+
+#final_galeria {
+    grid-area: final_gal;
+    margin: o auto;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    text-align: center;
+    background-color: whitesmoke;
+    color: black;
+}
+
+
+#final_galeria h2{
+    margin: 0 auto;
+    margin-top: 5vh;
+    display: flex;
+    font-size: 3em;
+}
+
+#final_galeria p{
+    font-size: 1em;
+    text-align: center;
+}
+
+#final_galeria button{
+    font-size: 1em;
+    margin: 20px;
+}
+
+
+/*FIN DE GALERIA*/
+/*FIN DE GALERIA*/
+/*FIN DE GALERIA*/
+
+
+/*FORMULARIO DE CONTACTO*/
+/*FORMULARIO DE CONTACTO*/
+.grid-container-contacto {
+	width: 90%;
+	max-width: 1000px;
+	display: grid;
+	grid-gap: 10px;
+    margin: 0 auto;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto auto auto auto auto;
+	grid-template-areas: "header_gal header_gal header_gal"
+						 "txt_contacto txt_contacto txt_contacto"
+                         "formulario formulario formulario"
+                         "final_contacto final_contacto final_contacto"
+                         "footer footer footer";
+}
+
+#header_contacto  {
+    grid-area: header_gal;
+}
+
+#header_contacto .logo{
+    display: flex;
+    padding: 5px 5px;
+    font-weight: bold;
+    color: green;
+    font-size: 1.6em;
+}
+
+#header_contacto nav{
+    display: flex;
+    text-align: center;
+}
+
+#header_contacto a{
+    display: flex;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    align-items: center;
+    padding: 10px;
+}
+
+#header_contacto a:hover{
+    color: violet;
+}
+
+
+#txt_contacto{
+    display: flex;
+    grid-area: txt_contacto;
+    flex-flow: row wrap;
+    justify-content: center;
+    
+}
+#contacto h2{
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+#contacto .txt_contacto{
+    width: 100%;
+    max-width: 600px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#formulario{
+    grid-area: formulario;
+    display: flex;
+    padding: 0 4px;
+    width: 100%;
+    flex-direction: row wrap;
+}
+
+
+#final_contacto {
+    grid-area: final_contacto;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    text-align: center;
+    background-color: whitesmoke;
+    color: black;
+}
+
+#final_contacto h2{
+    text-align: center;
+    justify-content: center;
+    margin-top: 5vh;
+    display: flex;
+    font-size: 2em;
+}
+
+#final_contacto p{
+    font-size: 1em;
+    text-align: center;
+}
+
+#final_contacto button{
+    font-size: 1em;
+    margin: 20px;
+}
+
+/*INCIO FORMULARIO*/
+.formulario{
+    display: flex;
+    flex-flow: row wrap;
+}
+#formulario{
+    margin: 20px;
+    width: 50%;
+}
+
+#tituloformulario{
+    margin-top: 35px;
+    margin-bottom: 35px;
+    font-size: 24px;
+}
+.contacto{
+    margin: 20px auto;
+}
+
+label{
+    margin: 15px;
+    display: inline-block;
+}
+input{
+    margin: 15px;
+    display: block;
+}
+.comentario{
+    text-align: left;
+    margin: 15px;
+    display: inline-block;
+}
+#mensaje{
+    margin-bottom: 20px;
+    display: block;
+}
+
+#nombre{
+    display: inline-block;
+}
+#apellido{
+    display: inline-block;
+}
+#correo{
+    display: inline-block;
+}
+
+
+
+
+/*FIN FORMULARIO*/
+
+
+/*FIN DE PAGINA FORMULARIO CONTACTO*/
+/*FIN DE PAGINA FORMULARIO CONTACTO*/
+/*FIN DE PAGINA FORMULARIO CONTACTO*/
+
+
+
+
+
+
+/*BREAKPOINTS*/
+/*BREAKPOINTS*/
+/*BREAKPOINTS*/
+
+@media only screen and (max-width: 768px) {
+    .grid-container {
+        width: 100%;
+        display: grid;
+        grid-gap: 10px;
+        margin: 0 auto;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas:"header"
+                             "hero"
+                            "explorar"
+                            "tienda "
+                            "final"
+                            "footer";
+    }
+    
+    header{
+        width: 100%;
+        position: static;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .logo{
+        display: flex;
+        padding: 1px;
+        justify-content: center;
+    }
+
+    header a{
+        padding: 10px;
+        justify-content: center;
+    }
+
+    header nav{
+        display: flex;
+        flex-flow: column wrap;
+        text-align: center;
+        justify-content: center;
+        padding: 15px;
+    }
+
+    /*HERO*/
+    #hero {
+    grid-area: hero;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    max-height: 400px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    , url("/images/herob.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 1em;
+    }
+    #hero h1{
+        color: white;
+        font-size: 2em;
+        }
+    
+    #hero button{
+        font-size: 1em;
+        padding: 1em;
+    }
+
+
+    /*EXPLORAR*/
+    #explorar {
+        margin-top: 50px;
+        grid-area: explorar;
+        text-align: center;
+        align-content: center;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #explorar .img-container{
+        width: 30%;
+        height: 30%;
+    }
+
+    #explorar .texto{
+        width: 50%;
+        max-width: 400px;
+        text-align: justify;
+        padding-left: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #explorar h2{
+        margin-top: 0px;
+    }
+
+    #explorar .img-container{
+        background-image: url("/images/imagen5.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 50vh;
+        width: 40vh; 
+    }
+
+    /*TIENDA*/
+    #tienda {
+        grid-area: tienda;
+        margin-top: 50px;
+        text-align: center;
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    
+    #tienda h2{
+        font-size: 2.5em;
+        display: flex;
+        flex-flow: column wrap;
+
+    }
+    #tienda .ropa{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    
+    #tienda .item__card{
+            display: flex;
+            text-align: center;      
+    }
+
+    /*FINAL*/
+    #final {
+        grid-area: final;
+        width: 100%;
+        margin-top: 10px;
+        text-align: center;
+        align-content: center;
+        display: flex;
+        justify-content: center;
+    }
+    
+    #final h2{
+        font-size: 2em; 
+        display: flex;
+        flex-flow: column;
+    }
+    #final p{
+        font-size: 1em; 
+        display: flex;
+        flex-flow: column;
+    }
+    
+    /**GALERIA DE IMAGENES*/
+    /**GALERIA DE IMAGENES*/
+
+    .grid-container-galeria {
+        width: 90%;
+        max-width: 1000px;
+        display: grid;
+        grid-gap: 10px;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "header_gal header_gal header_gal"
+                            "gal_gal gal_gal gal_gal"
+                            "final_gal final_gal final_gal"
+                            "footer footer footer";
+    }
+
+    #header_galeria  {
+        grid-area: header_gal;
+    }
+
+    #header_galeria .logo{
+        display: flex;
+        padding: 5px 5px;
+        font-weight: bold;
+        color: green;
+        font-size: 1.6em;
+    }
+
+    #header_galeria nav{
+        display: flex;
+        text-align: center;
+    }
+
+    #header_galeria a{
+        display: flex;
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+        align-items: center;
+        padding: 5px;
+    }
+
+    #header_galeria a:hover{
+        color: pink;
+    }
+
+
+    #gal_gal{
+        grid-area: gal_gal;
+        display: flex;
+        padding: 0 4px;
+        width: 100%;
+    }
+
+    .flex-galery {
+        flex: 100%;
+        max-width: 100%;
+
+    }
+
+
+    #final_galeria {
+        grid-area: final_gal;
+        margin: o auto;
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        text-align: center;
+        background-color: whitesmoke;
+        color: black;
+    }
+
+    #final_galeria h2{
+        margin: 0 auto;
+        margin-top: 3vh;
+        display: flex;
+        font-size: 1.5em;
+    }
+
+    #final_galeria p{
+        font-size: 0.5em;
+        text-align: center;
+        padding: 5px;
+    }
+
+    #final_galeria button{
+        font-size: 1em;
+        margin: 20px;
+    }
+
+    /*FIN DE GALERIA*/
+    /*FIN DE GALERIA*/
+
+    /*FORMULARIO DE CONTACTO*/
+    /*FORMULARIO DE CONTACTO*/
+    .grid-container-contacto {
+        display: grid;
+        grid-gap: 10px;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: "header_gal header_gal header_gal"
+                            "txt_contacto txt_contacto txt_contacto"
+                            "formulario formulario formulario"
+                            "final_contacto final_contacto final_contacto"
+                            "footer footer footer";
+    }
+
+    #header_contacto  {
+        grid-area: header_gal;
+    }
+
+    #header_contacto .logo{
+        display: flex;
+     }
+
+    #header_contacto nav{
+        display: flex;
+        text-align: center;
+    }
+
+    #header_contacto a{
+        display: flex;
+    }
+
+    #header_contacto a:hover{
+        color: violet;
+    }
+
+
+    #txt_contacto{
+        display: flex;
+        grid-area: txt_contacto;       
+    }
+
+
+    #txt_contacto p{
+        display: flex;
+        align-content: center;
+        text-align: justify ;      
+    }
+
+
+    #formulario{
+        grid-area: formulario;
+        display: flex;
+        padding: 0 4px;
+        width: 100%;
+        flex-direction: row wrap;
+    }
+
+
+    #final_contacto {
+        grid-area: final_contacto;
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        text-align: center;
+        background-color: whitesmoke;
+        color: black;
+    }
+
+    #final_contacto h2{
+        text-align: center;
+        justify-content: center;
+        margin-top: 5vh;
+        display: flex;
+        font-size: 2em;
+    }
+
+    #final_contacto p{
+        font-size: 1em;
+        text-align: center;
+    }
+
+    #final_contacto button{
+        font-size: 1em;
+        margin: 20px;
+    }
+
+    /*INCIO FORMULARIO*/
+    .formulario{
+        display: flex;
+        flex-flow: row wrap;
+    }
+    #formulario{
+        margin: 20px;
+        width: 50%;
+    }
+
+    #tituloformulario{
+        margin-top: 35px;
+        margin-bottom: 35px;
+
+        display: flex;
+        align-content: center;
+        text-align: center ;
+    }
+    .contacto{
+        margin: 20px auto;
+    }
+
+    label{
+        margin: 15px;
+        display: inline-block;
+    }
+    input{
+        margin: 15px;
+        display: block;
+    }
+    .comentario{
+        text-align: left;
+        margin: 15px;
+        display: inline-block;
+    }
+    #mensaje{
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    #nombre{
+        display: inline-block;
+    }
+    #apellido{
+        display: inline-block;
+    }
+    #correo{
+        display: inline-block;
+    }
+
+
+
+
+    /*FIN FORMULARIO*/
+
+
+    /*FIN DE PAGINA FORMULARIO CONTACTO*/
+    /*FIN DE PAGINA FORMULARIO CONTACTO*/
+    /*FIN DE PAGINA FORMULARIO CONTACTO*/
+   
+  
+    
+
+  }
