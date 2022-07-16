@@ -100,7 +100,7 @@ header a:hover{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    , url("./images/herob.png");
+    , url("images/herob.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -151,7 +151,7 @@ header a:hover{
 }
 
 #explorar .img-container{
-    background-image: url("./images/imagen5.jpg");
+    background-image: url("images/imagen5.jpg");
     background-size: cover;
     background-position: center center;
     height: 500px;
@@ -203,7 +203,7 @@ header a:hover{
     border: 1px solid #000000;
     border-radius: 15px;
     padding: 5px;
-    background-image: url("./images/pantalon1.jpg");
+    background-image: url("images/pantalon1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -639,7 +639,7 @@ input{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    , url("./images/herob.png");
+    , url("images/herob.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -686,7 +686,7 @@ input{
     }
 
     #explorar .img-container{
-        background-image: url("./images/imagen5.jpg");
+        background-image: url("images/imagen5.jpg");
         background-size: cover;
         background-position: center center;
         height: 50vh;
