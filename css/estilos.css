@@ -309,12 +309,14 @@ footer p{
 	width: 90%;
 	max-width: 1000px;
 	display: grid;
+    overflow: hidden;
 	grid-gap: 10px;
     margin: 0 auto;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: auto auto auto auto;
+	grid-template-rows: auto auto auto auto auto;
 	grid-template-areas: "header_gal header_gal header_gal"
 						 "gal_gal gal_gal gal_gal"
+                         "anim anim anim"
                          "final_gal final_gal final_gal"
                          "footer footer footer";
 }
@@ -372,6 +374,12 @@ footer p{
     margin: 5px;
 }
 
+.flex-galery img:hover{
+    border: green 2px solid;
+    background-color: #000000;
+}
+
+
 #final_galeria {
     grid-area: final_gal;
     margin: o auto;
@@ -400,6 +408,95 @@ footer p{
     font-size: 1em;
     margin: 20px;
 }
+
+
+
+/*ANIMACIONES SECTION*/
+#anim{
+    grid-area: anim;
+    margin: o auto;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    text-align: center;
+    margin: 10vh;
+
+}
+
+.animatitulo{
+    margin: o auto;
+    display: flex;
+    font-size: 1em;
+    font-weight: 400;
+    flex-flow: column wrap;
+    align-content: center;
+    text-align: center;
+    margin: 5vh;
+}
+
+/*CAJA MOVIL Right*/
+  div .cajamovil{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: red;
+    align-self: flex-end;
+    position: relative;
+    animation-name: ejemplomovil;
+    animation-duration: 2s;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes ejemplomovil {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:0px; top:0px;}
+    75%  {background-color:green; left:200px; top:0px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+
+  /*TRANSFORMACION DE COLOR*/
+  div .cajacolor {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: ejemplo;
+    animation-duration: 3s;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+  }
+  
+  div .cajacolor:hover{
+    transform: rotate(200deg);
+    border: green 2px solid;
+  }
+
+  @keyframes ejemplo {
+    from {background-color: red;}
+    to {background-color: yellow;}
+  }
+
+
+/*Gradiente*/
+#grad1 {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+    background-color: red;
+    background-image: linear-gradient(rgb(16, 238, 90), rgb(23, 111, 243));
+  }
+
+  #grad1:hover{
+    background-image: linear-gradient(rgb(238, 134, 16), rgb(236, 23, 243));
+  }
+
 
 
 /*FIN DE GALERIA*/
@@ -756,11 +853,12 @@ input{
         grid-gap: 10px;
         margin: 0 auto;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto auto auto auto;
-        grid-template-areas: "header_gal header_gal header_gal"
-                            "gal_gal gal_gal gal_gal"
-                            "final_gal final_gal final_gal"
-                            "footer footer footer";
+        grid-template-rows: auto auto auto auto auto;
+	grid-template-areas: "header_gal header_gal header_gal"
+						 "gal_gal gal_gal gal_gal"
+                         "anim anim anim"
+                         "final_gal final_gal final_gal"
+                         "footer footer footer";
     }
 
     #header_galeria  {
