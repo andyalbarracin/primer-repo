@@ -100,7 +100,7 @@ header a:hover{
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    , url('../images/herob.png');
+    , url(/images/herob.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -151,7 +151,7 @@ header a:hover{
 }
 
 #explorar .img-container{
-    background-image: url(../images/imagen5.jpg);
+    background-image: url(/images/imagen5.jpg);
     background-size: cover;
     background-position: center center;
     height: 500px;
